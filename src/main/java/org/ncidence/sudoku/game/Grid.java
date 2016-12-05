@@ -19,7 +19,7 @@ public class Grid implements IGrid {
 			throw new SudokuSolverFatalException("Grid is null (cellsAsStrings).");
 
 		if (cellsAsStrings.length != 81)
-			throw new SudokuSolverFatalException("Grid has less than 81 cells: " + cellsAsStrings.length);
+			throw new SudokuSolverFatalException("Grid has "+(cellsAsStrings.length<81 ? "less" : "more")+" than 81 cells: " + cellsAsStrings.length);
 
 		this.cells = new Cell[cellsAsStrings.length];
 
